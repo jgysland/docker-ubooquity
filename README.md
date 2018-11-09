@@ -50,7 +50,7 @@ http://192.168.x.x:8080 would show you what's running INSIDE the container on po
 * `-v /books` - Location of books.
 * `-v /comics` - Location of comics.
 * `-v /files` - Location of raw files.
-* `-e MAXMEM` - to set the maximum memory
+* `-e MAXMEM` - to set the maximum memory (in MB)
 * `-e PGID` for GroupID - see below for explanation
 * `-e PUID` for UserID - see below for explanation
 
@@ -58,7 +58,7 @@ It is based on alpine linux with s6 overlay, for shell access whilst the contain
 
 ### MAXMEM
 
-The quantity of memory allocated to Ubooquity depends on the hardware your are running it on. If this quantity is too small, you might sometime saturate it with when performing memory intensive operations. That’s when you get `java.lang.OutOfMemoryError:` Java heap space errors.
+The quantity of memory (in MB) allocated to Ubooquity depends on the hardware your are running it on. If this quantity is too small, you might sometime saturate it with when performing memory intensive operations. That’s when you get `java.lang.OutOfMemoryError:` Java heap space errors.
 
 You can explicitly set the amount of memory Ubooquity is allowed to use (be careful to set a value lower than the actual physical memory of your hardware). 
 
